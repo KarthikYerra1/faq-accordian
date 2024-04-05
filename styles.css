@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-pink: hsl(275, 100%, 97%);
+  --color-grayish-purple: hsl(292, 16%, 49%);
+  --color-dark-purple: hsl(292, 42%, 14%);
+  --bg-image: url("assets/images/background-pattern-mobile.svg");
+}
+
+@media (min-width: 768px) {
+  :root {
+    --bg-image: url("assets/images/background-pattern-desktop.svg");
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "work sans", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--color-light-pink);
+  min-height: 100vh;
+  position: relative;
+}
+
+.img {
+  background-image: var(--bg-image);
+  height: 40vh;
+}
+
+.main-content-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 10%;
+  padding: 1rem;
+  min-height: 80%;
+}
+
+.content-container {
+  background-color: var(--color-white);
+  width: 95%;
+  max-width: 550px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+}
+
+.heading-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem;
+  color: var(--color-dark-purple);
+  letter-spacing: 2px;
+}
+
+.question-container {
+  margin: 1rem;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.question h3 {
+  font-size: 0.8rem;
+  color: var(--color-dark-purple);
+}
+
+.question h3:hover,
+.question h3:focus {
+  color: var(--color-grayish-purple);
+}
+
+.answer {
+  color: var(--color-grayish-purple);
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.no-active {
+  display: none;
+}
+
+.line {
+  border-top: solid 1px var(--color-light-pink);
+  width: 97%;
+}
+
+.attribution {
+  margin-top: 2rem;
+  color: var(--color-dark-purple);
+  font-weight: 600;
+  padding: 1rem;
+  font-size: 0.6rem;
+}
+
+.attribution a:first-child {
+  color: #000;
+}
+
+.attribution a:last-child {
+  color: var(--color-dark-purple);
+}
+
+.attribution a:last-child:hover {
+  color: var(--color-grayish-purple);
+  font-size: 0.9rem;
+  transition: ease-in-out 0.8s;
+}
